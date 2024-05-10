@@ -1,0 +1,248 @@
+:root {
+  --Pink: hsl(322, 100%, 66%);
+  --VeryPaleCyan: hsl(193, 100%, 96%);
+  --VeryDarkCyan: hsl(192, 100%, 9%);
+  --GrayishBlue: hsl(208, 11%, 55%);
+}
+
+* {
+  font-family: "Poppins";
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: var(--VeryDarkCyan);
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  max-height: 100vh;
+}
+
+.landing-page {
+  background-color: var(--VeryPaleCyan);
+  padding: 50px 90px;
+  background-image: url(images/bg-hero-desktop.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.landing-page section {
+  margin: 70px 0;
+}
+.content {
+  max-width: 474px;
+}
+.content h1 {
+  font-size: 40px;
+}
+.content p {
+  font-weight: 500;
+  margin: 20px 0 35px;
+  font-family: "Open Sans";
+}
+section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+section .img-container {
+  max-width: 600px;
+}
+
+.button {
+  background-color: var(--Pink);
+  color: white;
+  border-radius: 30px;
+  padding: 15px 65px;
+  margin-top: 30px;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+}
+.button:hover {
+  background-color: hsla(322, 100%, 66%, 0.534);
+}
+.mini-sec .button:hover {
+  background-color: hsla(322, 100%, 66%, 0.534);
+}
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-logo-container {
+  max-width: 150px;
+}
+img {
+  max-width: 100%;
+}
+
+.signup {
+  background-color: white;
+  padding: 10px 50px;
+  border-radius: 30px;
+  box-shadow: 3px 3px 15px rgba(128, 128, 128, 0.2);
+  font-weight: 700;
+}
+.signup:hover {
+  color: var(--GrayishBlue);
+}
+main {
+  margin: 0 90px;
+  position: relative;
+}
+
+.cards {
+  margin: 100px auto;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 3px 3px 15px rgba(128, 128, 128, 0.2);
+  padding: 30px 100px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+main :nth-child(2) {
+  flex-direction: row-reverse;
+}
+main :nth-child(3) {
+  margin-bottom: 280px;
+}
+.cards .content {
+  max-width: 430px;
+}
+.cards p {
+  color: var(--GrayishBlue);
+  font-weight: 400;
+  font-family: "Open Sans";
+}
+
+.cards .img-container {
+  max-width: fit-content;
+}
+
+.mini-sec {
+  position: absolute;
+  left: 24%;
+  bottom: -470px;
+  width: 54%;
+  text-align: center;
+  flex-direction: column;
+  gap: 25px;
+  padding: 45px 20px;
+}
+.mini-sec .button {
+  background-color: var(--Pink);
+  color: white;
+  border-radius: 30px;
+  padding: 18px 95px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+footer {
+  background-color: var(--VeryDarkCyan);
+  width: 100%;
+  padding: 160px 90px 10px;
+}
+.flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.col a {
+  color: white;
+}
+.col a:hover {
+  text-decoration: underline;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 12px;
+  font-weight: 300;
+}
+.ico p {
+  color: white;
+  font-size: 10px;
+  text-wrap: wrap;
+  max-width: 270px;
+}
+i {
+  color: white;
+  font-size: 20px;
+  margin-left: 6px;
+}
+.icons a i:hover {
+  color: var(--Pink);
+}
+.ico {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  align-self: flex-start;
+}
+.footer-logo-container {
+  width: 150px;
+}
+span {
+  color: white;
+}
+
+@media screen and (max-width: 780px) {
+  .landing-page {
+    background-image: url(images/bg-hero-mobile.svg);
+    padding: 20px 40px;
+  }
+  section {
+    flex-direction: column;
+    gap: 30px;
+  }
+  main {
+    margin: 0 40px;
+  }
+  main .cards {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 30px 50px;
+  }
+  .cards.mini-sec {
+    flex-direction: column;
+    width: 100%;
+    left: 0;
+  }
+  .flex-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+  }
+  .last .icons {
+    align-self: center;
+  }
+  .flex-container .last {
+    align-self: center;
+  }
+  footer {
+    padding: 100px 40px 10px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .mini-sec {
+    bottom: -425px;
+  }
+  .header-logo-container {
+    max-width: 100px;
+  }
+  .signup {
+    padding: 10px 10px;
+  }
+  .mini-sec .button {
+    padding: 15px 25px;
+  }
+}
